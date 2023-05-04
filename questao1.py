@@ -71,8 +71,8 @@ def mix_up(a, b):
     rest_b = b[2:]
     string1 = first_b + rest_a
     string2 = first_a + rest_b
-    resultad = f"{string1} {string2}"
-    return resultad
+    resultado = f"{string1} {string2}"
+    return resultado
 
 
 class MyTest(unittest.TestCase):
