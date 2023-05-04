@@ -18,7 +18,9 @@ def match_ends(words):
 
 
 def front_x(words):
-    pass
+    words_com_x = sorted([word for word in words if word.startswith('x')])
+    words_no_x = sorted([word for word in words if not word.startswith('x')])
+    return words_com_x + words_no_x
 
 # Dado uma lista de tuplas não vazias, retornar uma lista ordenada
 # pelo último elemento de cada tupla.
