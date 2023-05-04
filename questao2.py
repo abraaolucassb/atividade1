@@ -54,14 +54,10 @@ class MyTest(unittest.TestCase):
         self.assertEqual(not_bad('This tea is not hot'), 'This tea is not hot')
         self.assertEqual(not_bad("It's bad yet not"), "It's bad yet not")
 
-
-'''
-
     def test_front_back(self):
         self.assertEqual(front_back('abcd', 'xy'), 'abxcdy')
         self.assertEqual(front_back('abcde', 'xyz'), 'abcxydez')
         self.assertEqual(front_back('Kitten', 'Donut'), 'KitDontenut')
-'''
 
 
 if __name__ == '__main__':
