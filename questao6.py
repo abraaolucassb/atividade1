@@ -2,18 +2,29 @@ def palindrome(texto):
     '''Faça uma função que verifique se uma textro passado é palíndrome,
     isto é, se é igual quando lido de trás pra frente.'''
 
+
+texto = texto.strip().lower()
+novo_texto = ''
+for letra in texto:
+    if letra.isalnum():
+        novo_texto += letra
+
+
 def troca_caixa(texto):
     '''Vogais ficam em caixa alta (maiúsculas)
     Consoantes ficam em caixa baixa (minúsculas)'''
+
 
 def imprime_mes_por_extenso(data):
     '''Faça um programa que solicite a data de nascimento (dd/mm/aaaa) 
     e imprima com o nome do mês por extenso
     '''
 
+
 def encontra_caracter(texto, caracter):
     '''Receba um texto e retorne a localização da primeira vez que 
     aparece o caracter especificado'''
+
 
 def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     ''' Daniela é uma pessoa muito supersticiosa. Para ela, um número é 
@@ -25,6 +36,7 @@ def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     verifica o intervalo dado
     '''
 
+
 def ponteironuloville(telefones):
     '''Na pacata vila campestre de Ponteironuloville, todos os telefones 
     têm 6 dígitos. A companhia telefônica estabelece as seguintes regras 
@@ -32,7 +44,7 @@ def ponteironuloville(telefones):
     1. Não pode haver dois dígitos consecutivos idênticos, porque isso é chato;
     2. A soma dos dígitos tem que ser par, porque isso é legal;
     3. O último dígito não pode ser igual ao primeiro, porque isso dá azar.
-    
+
     Então, dadas essas regras perfeitamente razoáveis, bem projetadas e 
     maduras, quantos números de telefone na lista abaixo são válidos?  
     Dica: faça uma função de validação e outra que a chama e verifica os 
@@ -67,9 +79,11 @@ def ponteironuloville(telefones):
         Resposta: 39 
     '''
 
+
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
-total = 0 
+total = 0
+
 
 def test(obtido, esperado):
     global acertos, total
@@ -79,34 +93,35 @@ def test(obtido, esperado):
     else:
         prefixo = ' Passou.'
         acertos += 1
-    print ('%s Esperado: %s \tObtido: %s' % (prefixo,repr(esperado), 
-        repr(obtido)))
+    print('%s Esperado: %s \tObtido: %s' % (prefixo, repr(esperado),
+                                            repr(obtido)))
+
 
 def main():
 
     print(' Palindrome:')
-    test(palindrome("ovo"), True) # normal
-    test(palindrome("Ovo"), True) # mudança de caixa
-    test(palindrome("Ovo "), True) # espaço no final
-    test(palindrome(" Ovo "), True) # espaço no início
-    test(palindrome('Assam a massa'), True) # frases (espaços em branco)
-    test(palindrome('Ame o poema!'), True) # frases com pontuação
+    test(palindrome("ovo"), True)  # normal
+    test(palindrome("Ovo"), True)  # mudança de caixa
+    test(palindrome("Ovo "), True)  # espaço no final
+    test(palindrome(" Ovo "), True)  # espaço no início
+    test(palindrome('Assam a massa'), True)  # frases (espaços em branco)
+    test(palindrome('Ame o poema!'), True)  # frases com pontuação
 
     print(' Troca caixa:')
-    test(troca_caixa("Araquari"), "ArAqUArI") # normal
-    test(troca_caixa("Caxias do Sul"), "cAxIAs dO sUl") # com espaços
+    test(troca_caixa("Araquari"), "ArAqUArI")  # normal
+    test(troca_caixa("Caxias do Sul"), "cAxIAs dO sUl")  # com espaços
 
     print(' Mês por extenso:')
     test(imprime_mes_por_extenso("19/05/2014"), "19 de maio de 2014")
     test(imprime_mes_por_extenso("25/12/2016"), "25 de dezembro de 2016")
 
     print(' Encontra caracter:')
-    test(encontra_caracter("--*--","*"), 2)
-    test(encontra_caracter("19/05/2014","/"), 2)
-    test(encontra_caracter("19/05/2014","."), None)
+    test(encontra_caracter("--*--", "*"), 2)
+    test(encontra_caracter("19/05/2014", "/"), 2)
+    test(encontra_caracter("19/05/2014", "."), None)
 
     print(' Números sortudos:')
-    test(numeros_sortudos(18644,33087), 7995)
+    test(numeros_sortudos(18644, 33087), 7995)
 
     print(' Ponteironuloville:')
     telefones = ['91775523', '88032828']
@@ -142,9 +157,10 @@ def main():
     telefones = open('telefones.txt').read().strip().split()
     test(ponteironuloville(telefones), 39)
 
+
 if __name__ == '__main__':
     main()
-    print("\n%d Testes, %d Ok, %d Falhas: Nota %.1f" %(total, acertos,
-     total-acertos, float(acertos*10)/total))
+    print("\n%d Testes, %d Ok, %d Falhas: Nota %.1f" % (total, acertos,
+                                                        total-acertos, float(acertos*10)/total))
     if total == acertos:
         print("Parabéns, seu programa rodou sem falhas!")
