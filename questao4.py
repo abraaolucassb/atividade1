@@ -7,7 +7,14 @@ import unittest
 
 
 def remove_adjacent(nums):
-    pass
+    lista_nova = []
+    for num in nums:
+        if len(lista_nova):
+            if lista_nova[-1] != num:
+                lista_nova.append(num)
+        else:
+            lista_nova.append(num)
+    return lista_nova
 
 # Dado duas listas ordenadas em ordem crescente, criar e retornar uma
 # lista de todos os elementos em ordem algabética.
