@@ -4,7 +4,7 @@ import unittest
 def verbing(s):
     # SEU CODIGO AQUI
     if len(s) >= 3:
-        if s.endwith('ing'):
+        if s.endswith('ing'):
             s += 'ly'
         else:
             s += 'ing'
