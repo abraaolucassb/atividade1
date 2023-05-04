@@ -20,14 +20,18 @@ def not_bad(s):
     ocor_not = s.find('not')
     ocor_bad = s.find('bad')
 
-    if ocor_not > ocor_bad:
+    if ocor_not < ocor_bad:
+        resultado = re.sub(r'not.*bad', 'good', s)
+        return resultado
+    else:
+        return s
 
-        # Considere dividir uma string em duas metades.
-        # Se o comprimento for par, a parte da frete (front) e a parte de trás (back) são do mesmo tamanho.
-        # Se o comprimento for ímpar, o caracter extra irá para a aprte da frente.
-        #
-        # Dado 2 strings, 'a' e 'b', retornar um string na forma
-        # a front + b front + a back + b back
+# Considere dividir uma string em duas metades.
+# Se o comprimento for par, a parte da frete (front) e a parte de trás (back) são do mesmo tamanho.
+# Se o comprimento for ímpar, o caracter extra irá para a aprte da frente.
+#
+# Dado 2 strings, 'a' e 'b', retornar um string na forma
+# a front + b front + a back + b back
 
 
 def front_back(a, b):
