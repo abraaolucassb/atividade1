@@ -5,7 +5,7 @@ def comprar_frutas(morango=0, uva=0):
                           Até 5 Kg           Acima de 5 Kg
     Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
     Uva             R$ 1,80 por Kg          R$ 1,50 por Kg
-    
+
     Se o cliente comprar mais de 8 Kg em frutas ou o valor total da 
     compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% 
     sobre este total. 
@@ -13,6 +13,27 @@ def comprar_frutas(morango=0, uva=0):
     quantidade (em Kg) de uvas adquiridas e escreva o valor a ser 
     pago pelo cliente.
     '''
+
+    kgTotal = morango + uva
+    precoM = 0
+    precoU = 0
+    if morango > 0 and morango <= 5:
+        precoM = morango * 2.5
+    if morango > 5:
+        precoM = morango * 2.2
+    if uva > 0 and uva <= 5:
+        precoU = uva * 1.8
+    if uva > 5:
+        precoU = uva * 1.5
+
+    soma = precoM + precoU
+    precoT = round(soma, 2)
+
+    if kgTotal > 8 or precoT > 25:
+        desconto = precoT * 0.1
+        precoT = precoT - desconto
+
+    return precoT
 
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
