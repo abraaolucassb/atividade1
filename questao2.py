@@ -39,9 +39,6 @@ class MyTest(unittest.TestCase):
         self.assertEqual(verbing('swiming'), 'swimingly')
         self.assertEqual(verbing('do'), 'do')
 
-
-'''
-
     def test_not_bad(self):
         self.assertEqual(not_bad('This movie is not so bad'),
                          'This movie is good')
@@ -49,6 +46,9 @@ class MyTest(unittest.TestCase):
                          'This dinner is good!')
         self.assertEqual(not_bad('This tea is not hot'), 'This tea is not hot')
         self.assertEqual(not_bad("It's bad yet not"), "It's bad yet not")
+
+
+'''
 
     def test_front_back(self):
         self.assertEqual(front_back('abcd', 'xy'), 'abxcdy')
