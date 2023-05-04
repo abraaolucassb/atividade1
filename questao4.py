@@ -23,7 +23,9 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
-    pass
+    fusao = list1 + list2
+    fusao.sort()
+    return fusao
 
 
 class MyTest(unittest.TestCase):
