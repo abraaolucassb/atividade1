@@ -42,9 +42,6 @@ class MyTest(unittest.TestCase):
         self.assertEqual(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2)
         self.assertEqual(match_ends(['aaa', 'be', 'abc', 'hello']), 1)
 
-
-'''
-
     def test_front_x(self):
         self.assertEqual(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']), [
                          'xaa', 'xzz', 'axx', 'bbb', 'ccc'])
@@ -52,6 +49,9 @@ class MyTest(unittest.TestCase):
                          'xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
         self.assertEqual(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']), [
                          'xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
+
+
+'''
 
     def test_sort_last(self):
         self.assertEqual(sort_last([(1, 3), (3, 2), (2, 1)]), [
