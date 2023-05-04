@@ -35,17 +35,15 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # Calcular o comprimento das partes da frente das strings a e b
+
     comprimento_a = (len(a) + 1) // 2
     comprimento_b = (len(b) + 1) // 2
 
-    # Dividir as strings a e b nas partes da frente e de trás
     a_front = a[:comprimento_a]
     a_back = a[comprimento_a:]
     b_front = b[:comprimento_b]
     b_back = b[comprimento_b:]
 
-    # Retornar o resultado concatenado
     return a_front + b_front + a_back + b_back
 
 
