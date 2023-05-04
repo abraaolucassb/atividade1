@@ -53,8 +53,6 @@ class MyTest(unittest.TestCase):
                          'xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
 
 
-'''
-
     def test_sort_last(self):
         self.assertEqual(sort_last([(1, 3), (3, 2), (2, 1)]), [
                          (2, 1), (3, 2), (1, 3)])
@@ -62,7 +60,7 @@ class MyTest(unittest.TestCase):
                          (3, 1), (1, 2), (2, 3)])
         self.assertEqual(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]), [
                          (2, 2), (1, 3), (3, 4, 5), (1, 7)])
-'''
+
 
 
 if __name__ == '__main__':
