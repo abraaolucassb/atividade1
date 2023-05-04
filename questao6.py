@@ -8,16 +8,8 @@ texto = texto.strip().lower()
    for letra in texto:
         if letra.isalnum():
             novo_texto += letra
-    return novo_texto == novo_texto[::-1]
 
-'''
-texto = texto.strip().lower()
-    novo_texto = ''
-    for letra in texto:
-        if letra.isalnum():
-            novo_texto += letra
     return novo_texto == novo_texto[::-1]
-'''
 
 
 def troca_caixa(texto):
