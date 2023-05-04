@@ -27,7 +27,7 @@ def not_bad(s):
         return s
 
 # Considere dividir uma string em duas metades.
-# Se o comprimento for par, a parte da frete (front) e a parte de trás (back) são do mesmo tamanho.
+# Se o comprimento for par, a parte da frente (front) e a parte de trás (back) são do mesmo tamanho.
 # Se o comprimento for ímpar, o caracter extra irá para a aprte da frente.
 #
 # Dado 2 strings, 'a' e 'b', retornar um string na forma
@@ -35,8 +35,18 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # SEU CODIGO AQUI
-    pass
+    # Calcular o comprimento das partes da frente das strings a e b
+    comprimento_a = (len(a) + 1) // 2
+    comprimento_b = (len(b) + 1) // 2
+
+    # Dividir as strings a e b nas partes da frente e de trás
+    a_front = a[:comprimento_a]
+    a_back = a[comprimento_a:]
+    b_front = b[:comprimento_b]
+    b_back = b[comprimento_b:]
+
+    # Retornar o resultado concatenado
+    return a_front + b_front + a_back + b_back
 
 
 class MyTest(unittest.TestCase):
