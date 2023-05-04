@@ -35,9 +35,12 @@ def donutsV2(count):
 
 
 def both_ends(s):
-    resto = s[0] + s[1:].replace(s[0], '*')
-    return resto
-
+    if len(s) < 2:
+        return ''
+    first_char = s[0]
+    last_char = s[-1]
+    middle_chars = s[1:-1].replace(first_char, '')
+    return first_char + middle_chars + last_char
 
 # Dado uma string `s`, retornar uma string onde
 # todas as ocorrências de seu primeiro caractere
@@ -71,15 +74,15 @@ class MyTest(unittest.TestCase):
         self.assertEqual(donuts(10), 'Number of donuts: many')
         self.assertEqual(donuts(99), 'Number of donuts: many')
 
-
-'''
-
     def test_both_ends(self):
         self.assertEqual(both_ends('spring'), 'spng')
         self.assertEqual(both_ends('Hello'), 'Helo')
         self.assertEqual(both_ends('a'), '')
         self.assertEqual(both_ends('xyz'), 'xyyz')
         self.assertEqual(both_ends('xy'), 'xyxy')
+
+
+'''
 
     def test_fix_start(self):
         self.assertEqual(both_ends('xy'), 'xyxy')
