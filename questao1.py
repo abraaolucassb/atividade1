@@ -81,7 +81,6 @@ class MyTest(unittest.TestCase):
         self.assertEqual(both_ends('xy'), 'xyxy')
 
 
-'''
 
     def test_fix_start(self):
         self.assertEqual(both_ends('xy'), 'xyxy')
@@ -89,6 +88,7 @@ class MyTest(unittest.TestCase):
         self.assertEqual(fix_start('aardvark'), 'a*rdv*rk')
         self.assertEqual(fix_start('google'), 'goo*le')
         self.assertEqual(fix_start('donut'), 'donut')
+'''
 
     def test_mix_up(self):
         self.assertEqual(mix_up('mix', 'pod'), 'pox mid')
