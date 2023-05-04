@@ -65,7 +65,14 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    pass
+    first_a = a[:2]
+    rest_a = a[2:]
+    first_b = b[:2]
+    rest_b = b[2:]
+    string1 = first_b + rest_a
+    string2 = first_a + rest_b
+    resultado = f"{string1} {string2}"
+    return resultado
 
 
 class MyTest(unittest.TestCase):
