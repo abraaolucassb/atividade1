@@ -52,8 +52,11 @@ def both_ends(s):
 
 
 def fix_start(s):
-    pass
-
+    first = s[0]
+    resto = s[1:]
+    modificado = resto.replace(first, '*')
+    resultado = first + modificado
+    result resultado
 
 # Dado duas string `a` e `b`,  trocar os 2 primeiros caracteres entre as variáveis
 # e retornar uma única string separada por espaço como no exemplo:
@@ -80,14 +83,14 @@ class MyTest(unittest.TestCase):
         self.assertEqual(both_ends('xyz'), 'xyyz')
         self.assertEqual(both_ends('xy'), 'xyxy')
 
-
-
     def test_fix_start(self):
         self.assertEqual(both_ends('xy'), 'xyxy')
         self.assertEqual(fix_start('babble'), 'ba**le')
         self.assertEqual(fix_start('aardvark'), 'a*rdv*rk')
         self.assertEqual(fix_start('google'), 'goo*le')
         self.assertEqual(fix_start('donut'), 'donut')
+
+
 '''
 
     def test_mix_up(self):
