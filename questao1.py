@@ -37,10 +37,10 @@ def donutsV2(count):
 def both_ends(s):
     if len(s) < 2:
         return ''
-    first_char = s[0]
-    last_char = s[-1]
-    middle_chars = s[1:-1].replace(first_char, '')
-    return first_char + middle_chars + last_char
+    first = s[0]
+    last = s[-1]
+    middle = s[1:-1].replace(first, '')
+    return first + middle + last
 
 # Dado uma string `s`, retornar uma string onde
 # todas as ocorrências de seu primeiro caractere
