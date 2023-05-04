@@ -1,8 +1,6 @@
 def palindrome(texto):
     '''Faça uma função que verifique se uma textro passado é palíndrome,
     isto é, se é igual quando lido de trás pra frente.'''
-
-
 texto = texto.strip().lower()
 novo_texto = ''
 for letra in texto:
